@@ -43,4 +43,8 @@ It will cover the following:
 * After you have typed the names in all the fields you will select "Apply" at the bottom and you will see the names in the "VLAN NAME" field.
 
 ### 3. Tagging ports with VLANs:
-* 
+* You will then navigate to "VLANs" -> "Participation / Tagging".
+* Inside this interface you will see a drop-down in the middle nad all of the ports on the switch below that.
+* We will start with "10" in the drop-down which is our MGMT VLAN.
+* We want all of our servers to have access to that VLAN so we will change the letter to "U" on ports 1-8.
+* You will also need to change the port your management PC is on, mine is Port 13. So I will also set port 13 to "U" or "Untagged".
