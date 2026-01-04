@@ -20,7 +20,6 @@ It will cover the following:
 ---
 
 ## Prerequisites & Warnings
-List requirements or risks before starting.
 
 * **Access Needed:** PC connected to switch on any of the 24 ports.
 * **Dependencies:** Switch must be have power plugged into it.
