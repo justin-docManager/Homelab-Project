@@ -24,3 +24,10 @@
 | 192.168.20.11 | JHL-DC-01   | Domain Controller 1  | JHL-HV-03  |
 | 192.168.20.12 | JHL-DC-02   | Domain Controller 2  | JHL-HV-04  |
 | 192.168.20.20 | JHL-FS-01   | File Server (NAS)    | JHL-HV-05  |
+
+## JHL-SW-01 Port Mapping
+| Port(s) | Device(s)        | VLAN | Mode   |
+|:--------|:-----------------|:-----|:-------|
+| 1 - 8   | JHL-HV-01 to 08  | 10   | Access |
+| 13      | Management PC    | 10   | Access |
+| 23 - 24 | Future Uplinks   | TBD  | Trunk  |
