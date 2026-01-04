@@ -4,7 +4,7 @@
 This lab simulates a medium-sized enterprise environment using a "Virtualization First" approach. 
 
 ### Infrastructure Components
-* **Hypervisors:** 8x Windows Server 2022 Hyper-V Hosts (Old Optiplex 7040d)
+* **Hypervisors:** 8x Windows Server 2022 Hyper-V Hosts (Old Optiplex 7040)
 * **Networking:** Sophos XGS (VM) & HP ProCurve 1810G-24
 * **Identity:** Active Directory DS (Virtualized)
 * **IP Scheme:** 192.168.0.0/16 (Separated from Home 10.0.0.0/8)
