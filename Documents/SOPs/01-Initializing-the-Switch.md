@@ -22,7 +22,7 @@ It will cover the following:
 ## Prerequisites & Warnings
 
 * **Access Needed:** PC connected to switch on any of the 24 ports.
-* **Dependencies:** Switch must be have power plugged into it.
+* **Dependencies:** Switch must have power plugged into it.
 * **Downtime Required:** Yes
 
 ---
