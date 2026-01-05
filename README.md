@@ -27,8 +27,9 @@ To ensure scalability and ease of management, the following naming conventions a
 | Virtual Switches | `vSwitch-[VLAN ]` | `vSwitch-MGMT` |
 
 ### Project Roadmap
-* [ ] **Phase 1: Design & Documentation** (Current) - IPAM, Asset Registry, and GitHub setup.
-* [ ] **Phase 2: Core Networking** - HP ProCurve VLAN configuration and Sophos XGS initialization.
-* [ ] **Phase 3: Hypervisor Deployment** - Installation of Windows Server 2022 on all physical nodes.
+* [X] **Phase 1: Design & Documentation** - IPAM, Asset Registry, and GitHub setup.
+* [X] **Phase 2: Core Networking** - HP ProCurve VLAN configuration and Sophos XGS initialization.
+* [ ] **Phase 3: Hypervisor Deployment** (Current) - Installation of Windows Server 2022 on all physical nodes.
 * [ ] **Phase 4: Identity & Core Services** - Active Directory Forest creation, DNS, and DHCP migration.
 * [ ] **Phase 5: Storage & Backups** - File Server role and backup repository setup.
+* [ ] **Phase 6: Extended Learning** - TBD
