@@ -1,35 +1,43 @@
 # Enterprise Virtualization Home Lab
 
 ## Project Overview
-This lab simulates a medium-sized enterprise environment using a "Virtualization First" approach. 
+This repository documents my enterprise IT infrastructure homelab environment, built to demonstrate practical skills in Windows Server administration, Active Directory, networking, and infrastructure management.
 
-### Infrastructure Components
-* **Hypervisors:** 8x Windows Server 2022 Hyper-V Hosts (Old Optiplex 7040)
-* **Networking:** Sophos XGS (VM) & HP ProCurve 1810G-24
-* **Identity:** Active Directory DS (Virtualized)
-* **IP Scheme:** 192.168.0.0/16 (Separated from Home 10.0.0.0/8)
+## Skills learned
+- Active Directory Domain Services (AD DS)
+- DNS and DHCP Management
+- Hyper-V Virtualization
+- Network Segmentation (VLANs)
+- File Services and DFS
+- Remote Desktop Services
+- Backup and Disaster Recovery
+- PowerShell Automation
+- Infrastructure Documentation
+- Security Best Practices
 
-### Project Objectives
-* **Network Engineering:** Implementation of VLANs, Inter-VLAN routing, and Firewall using Sophos XGS.
-* **Systems Administration:** Deployment of a Windows Server 2022 environment including Active Directory Domain Services (ADDS).
-* **Core Services:** High-availability configuration of DNS and DHCP.
-* **Storage & Continuity:** Implementation of Network Attached Storage (NAS) roles and automated backup solutions.
-* **Virtualization:** Management of a multi-node Hyper-V cluster environment.
+## Lab Environment Overview
+- **Organization Code:** JHL
+- **Domain:** homelab.local
+- **Hypervisor:** Microsoft Hyper-V on Windows Server 2022
+- **Physical Hosts:** 8x Dell OptiPlex nodes (i5-6500, 16-24GB RAM)
+- **Networking:** HP ProCurve 1810G-24 (Layer 2), Sophos XGS Firewall
+- **Infrastructure Focus:** Windows Server 2022 environment
 
-### Standardization & Governance
-To ensure scalability and ease of management, the following naming conventions are applied:
+## Infrastructure Components
+- Domain Controllers (AD DS, DNS, DHCP)
+- File Servers with DFS
+- Remote Desktop Services (RDS)
+- Virtual Desktop Infrastructure (VDI)
+- Backup and Monitoring Systems
+- Network Segmentation with VLANs
 
-| Asset Type | Convention | Example |
-| :--- | :--- | :--- |
-| Physical Hosts | `JHL-HV-[01-08]` | `JHL-HV-01` |
-| Virtual Servers | `JHL-[Role]-[01-99]` | `JHL-DC-01` |
-| Client VMs | `JHL-[OS]-[01-99]` | `JHL-WIN11-01` |
-| Virtual Switches | `vSwitch-[VLAN ]` | `vSwitch-MGMT` |
+## Documentation
+See the `/docs` folder for detailed documentation on each component and build phases.
 
-### Project Roadmap
-* [X] **Phase 1: Design & Documentation** - IPAM, Asset Registry, and GitHub setup.
-* [X] **Phase 2: Core Networking** - HP ProCurve VLAN configuration and Sophos XGS initialization.
-* [ ] **Phase 3: Hypervisor Deployment** (Current) - Installation of Windows Server 2022 on all physical nodes.
-* [ ] **Phase 4: Identity & Core Services** - Active Directory Forest creation, DNS, and DHCP migration.
-* [ ] **Phase 5: Storage & Backups** - File Server role and backup repository setup.
-* [ ] **Phase 6: Extended Learning** - TBD
+## Current Status
+**Phase 1:** Foundation & Documentation Framework (In Progress)
+
+## Author
+[Justin Stern] - Tier 2 Helpdesk Technician | Aspiring Systems/Network Administrator
+
+**Contact:** [www.linkedin.com/in/justin-stern-2b671a1a0]
