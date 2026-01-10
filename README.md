@@ -3,6 +3,8 @@
 ## Project Overview
 This repository documents my enterprise IT infrastructure homelab environment, built to demonstrate practical skills in Windows Server administration, Active Directory, networking, and infrastructure management.
 
+**Note:** This documentation was mostly created using AI (Claude) to give me some templates and such to fill out and learn how to document things properly.
+
 ## Skills learned
 - Active Directory Domain Services (AD DS)
 - DNS and DHCP Management
