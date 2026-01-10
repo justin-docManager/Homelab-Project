@@ -38,6 +38,6 @@ See the `/docs` folder for detailed documentation on each component and build ph
 **Phase 1:** Foundation & Documentation Framework (In Progress)
 
 ## Author
-[Justin Stern] - Tier 2 Helpdesk Technician | Aspiring Systems/Network Administrator
+Justin Stern - Tier 2 Helpdesk Technician | Aspiring Systems/Network Administrator
 
-**Contact:** [www.linkedin.com/in/justin-stern-2b671a1a0]
+**Contact:** www.linkedin.com/in/justin-stern-2b671a1a0
