@@ -197,27 +197,47 @@ Set-VMNetworkAdapterVlan -VMName "JHL-DC-01" -Access -VlanId 20
 
 ## Physical Switch Configuration
 
-### HP ProCurve 1810G-24 Port Assignments
+### HP ProCurve 1810G-24 Current Configuration
 
-| Port(s) | Connection | Configuration | VLANs | Notes |
-|---------|------------|---------------|-------|-------|
-| 1 | Sophos XGS LAN | Trunk | 10, 20, 30, 40, 50 | All VLANs for routing |
-| 2 | JHL-HV-01 | Access (VLAN 10) | 10 | Management only (Sophos host) |
-| 3 | JHL-HV-02 | Trunk | 10, 20, 30, 40, 50 | VM host |
-| 4 | JHL-HV-03 | Trunk | 10, 20, 30, 40, 50 | VM host |
-| 5 | JHL-HV-04 | Trunk | 10, 20, 30, 40, 50 | Reserved |
-| 6 | JHL-HV-05 | Trunk | 10, 20, 30, 40, 50 | Reserved |
-| 7 | JHL-HV-06 | Trunk | 10, 20, 30, 40, 50 | Reserved |
-| 8 | JHL-HV-07 | Trunk | 10, 20, 30, 40, 50 | Reserved |
-| 9 | JHL-HV-08 | Trunk | 10, 20, 30, 40, 50 | Reserved |
-| 20-24 | Reserved | Access (TBD) | TBD | Physical devices if needed |
+**Management:**
+- Management IP: 192.168.10.2/24
+- Management VLAN: 10
+- Web UI: http://192.168.10.2
 
-**Switch Management:**
-- Management IP: 192.168.10.2
-- Native VLAN: 10 (Management)
-- Web UI access from management VLAN only
+### Port Assignments
 
----
+| Port(s) | Connection | Current Config | Planned Config | Notes |
+|---------|------------|----------------|----------------|-------|
+| 1 | JHL-HV-01 | Untagged VLAN 10 | **No change** | Sophos XGS host - management only |
+| 2 | JHL-HV-02 | Untagged VLAN 10 | **Trunk:** Untagged VLAN 10, Tagged 20,30,40,50 | VM host needs all VLANs |
+| 3 | JHL-HV-03 | Untagged VLAN 10 | **Trunk:** Untagged VLAN 10, Tagged 20,30,40,50 | VM host needs all VLANs |
+| 4 | JHL-HV-04 | Untagged VLAN 10 | **Trunk:** Untagged VLAN 10, Tagged 20,30,40,50 | Reserved |
+| 5 | JHL-HV-05 | Untagged VLAN 10 | **Trunk:** Untagged VLAN 10, Tagged 20,30,40,50 | Reserved |
+| 6 | JHL-HV-06 | Untagged VLAN 10 | **Trunk:** Untagged VLAN 10, Tagged 20,30,40,50 | Reserved |
+| 7 | JHL-HV-07 | Untagged VLAN 10 | **Trunk:** Untagged VLAN 10, Tagged 20,30,40,50 | Reserved |
+| 8 | JHL-HV-08 | Untagged VLAN 10 | **Trunk:** Untagged VLAN 10, Tagged 20,30,40,50 | Reserved |
+| 9-23 | Available | Default | Access (TBD) | Available for physical devices |
+| **24** | **Sophos XGS LAN** | **Untagged VLAN 10** | **Trunk:** Untagged VLAN 10, Tagged 20,30,40,50 | **Critical: All VLANs for routing** |
+
+### Configuration Notes
+
+**Port 24 (Sophos LAN) - Most Important:**
+- This is where all inter-VLAN routing happens
+- Must be configured as trunk carrying ALL VLANs
+- Sophos will have virtual interfaces for each VLAN on this physical connection
+- Native/Untagged VLAN: 10 (Management)
+- Tagged VLANs: 20, 30, 40, 50
+
+**Ports 1-8 (Hyper-V Hosts):**
+- Port 1 (JHL-HV-01): Access port only - dedicated Sophos host
+- Ports 2-8: Will be configured as trunks for VM traffic
+- Management traffic (untagged) goes on VLAN 10
+- VM traffic (tagged) goes on VLANs 20, 30, 40, 50
+
+**Why This Matters:**
+- Sophos needs Port 24 to have all VLANs to route between them
+- VM hosts need trunk ports to assign VMs to different VLANs
+- Physical separation: Port 1 is just for Sophos host management
 
 ## Traffic Flow Examples
 
