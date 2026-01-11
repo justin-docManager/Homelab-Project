@@ -44,6 +44,7 @@ I'm building this out in phases to create:
 - **/docs** - Detailed guides and procedures
 - **/configs** - Configuration files and scripts
 - **/diagrams** - Network diagrams and architecture drawings
+  - **/diagrams/screenshots** - Screenshots of relevant information.
 
 ## Tools & Technologies
 - **Virtualization**: Hyper-V (Windows Server 2022)
@@ -54,10 +55,10 @@ I'm building this out in phases to create:
 ## Progress Tracking
 - [x] Physical infrastructure setup
 - [x] Network isolation configured
-- [ ] Active Directory deployment
+- [x] Active Directory deployment
 - [ ] DNS/DHCP implementation
 - [ ] File services
 - [ ] Remote Desktop Services
 - [ ] Additional VLANs and segmentation
 
-*Last Updated: 1/10/2026*
+*Last Updated: 1/11/2026*
