@@ -3,6 +3,8 @@
 ## Overview
 This repository documents my homelab environment where I'm building and learning enterprise IT infrastructure concepts. The goal is to create a realistic Active Directory domain with multiple services that mirror what you'd find in a business environment.
 
+**Note:** This GitHub was documented with the help of Claude AI.
+
 ## Purpose
 I'm a Tier 2 Helpdesk Technician working towards a Junior Systems Administrator or Junior Network Engineer role. This homelab helps me develop hands-on experience with:
 - Windows Server Administration
